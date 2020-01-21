@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 0 2px #dddddd;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  display: flex;
+}
+
+.show-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0.625rem;
+}
+
+img {
+  width: 6%;
+  margin: 0.625rem;
+  box-shadow: 0 4px 4px -1px #666666;
+}
+
+.show-info__priceRange {
+  color: #1d781d;
+  margin-top: 2px;
+}
+
+.show-info__learn-more {
+  color: #0068d9;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.show-info__learn-more svg:active {
+  fill: #004ba0;
+}
+
+.show-info__learn-more span,
+.show-info__learn-more svg {
+  vertical-align: middle;
+}
+
+.show-info__name {
+  font-size: 2rem;
+}
+
+.performance-info {
+  border-top: 1px solid #dddddd;
+  display: flex;
+  align-items: center;
+}
+
+.performance-info--target {
+  opacity: 0;
+  transition: 0.25s ease;
+}
+
+.performance-info:last-child {
+  border-bottom: 1px solid #dddddd;
+}
+
+.performance-info__date {
+  padding: 1rem;
+  border-right: 1px solid #dddddd;
+  text-align: center;
+}
+
+.performance-info__date span {
+  color: #666666;
+}
+
+.performance-info__time {
+  background: #0068d9;
+  color: white;
+  border-radius: 0.65rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  margin-left: 0.85rem;
+  border: none;
+  cursor: pointer;
+}
+
+.performance-info__time:focus {
+  border-radius: 0.65rem;
+}
+
+.performance-info__time:hover {
+  background: #004ba0;
+}
+
+.performance-info__time:active {
+  background-image: linear-gradient(#004ba0, #0068d9);
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  color: #0068d9;
+  cursor: pointer;
+}
+
+.footer svg {
+  position: absolute;
+  top: 50%;
+  left: 97%;
+  transform: translateY(-50%);
+}
+
+.learn-more span:active,
+.footer:active {
+  text-decoration: underline;
+  color: #004ba0;
+}
+
+.footer__calendar {
+  position: relative;
+}
+
+.footer__calendar::after {
+  content: '';
+  border: solid #0068d9;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(-45deg);
+}
+
+/* React TransitionGroup Classes */
+
+.performance-target-enter {
+  opacity: 0;
+}
+.performance-target-enter-active {
+  opacity: 1;
+  transition: opacity 600ms;
+}

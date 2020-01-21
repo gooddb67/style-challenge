@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import ShowtimesContainer from './ShowtimesContainer';
+import showData from './showData';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <ShowtimesContainer
+    performances={showData}
+    showName="The Phantom of the Opera"
+    priceRange="$29.00 - 215.00"
+  />,
+  document.getElementById('root')
+);
