@@ -86,6 +86,8 @@ img {
 
 .performance-info__time:focus {
   border-radius: 0.65rem;
+  border: 2px solid #b3d7ec;
+  outline: none;
 }
 
 .performance-info__time:hover {
